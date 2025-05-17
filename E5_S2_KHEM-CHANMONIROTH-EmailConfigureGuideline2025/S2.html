@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Email Setup Guide</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      background-color: #f9fafb;
+      color: #333;
+    }
+    header {
+      background: linear-gradient(135deg, #00539C, #0078D4);
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0 0 10px;
+      font-size: 2.5rem;
+    }
+    header p {
+      margin: 0;
+      font-size: 1.1rem;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      background-color: #fff;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+      padding: 10px;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    nav button {
+      padding: 12px 20px;
+      border: none;
+      background-color: #e2e8f0;
+      color: #333;
+      border-radius: 6px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    nav button.active, nav button:hover {
+      background-color: #00539C;
+      color: white;
+    }
+    .content {
+      display: none;
+      max-width: 800px;
+      margin: 40px auto;
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    }
+    .content.active {
+      display: block;
+    }
+    .content h2 {
+      color: #00539C;
+      margin-bottom: 20px;
+    }
+    ol {
+      padding-left: 20px;
+      line-height: 1.8;
+    }
+    ol li {
+      margin-bottom: 20px;
+    }
+    img.step-img {
+      max-width: 100%;
+      margin-top: 10px;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    }
+    ul {
+      padding-left: 20px;
+    }
+    a {
+      color: #0078D4;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #f1f5f9;
+      color: #666;
+      font-size: 0.95rem;
+      margin-top: 60px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Email Setup Guide</h1>
+    <p>GUIDLINE</p>
+  </header>
+
+  <nav>
+    <button class="tab-btn active" onclick="showTab('thunderbird')">Mozilla Thunderbird</button>
+    <button class="tab-btn" onclick="showTab('outlook')">Microsoft Outlook</button>
+    <button class="tab-btn" onclick="showTab('gmail')">Gmail Send As</button>
+  </nav>
+
+  <!-- Thunderbird Section -->
+  <div id="thunderbird" class="content active">
+    <h2>Mozilla Thunderbird Setup</h2>
+    <ol>
+      <li>
+        Go to <a href="https://www.thunderbird.net" target="_blank">thunderbird.net</a>.
+        <img src="image/S2Image/Mozilla/Screenshot 2025-05-17 173328.png" alt="Thunderbird website" class="step-img">
+      </li>
+      <li>
+        Install Thunderbird using the downloaded installer.
+        <img src="images/thunderbird2.png" alt="Installation process" class="step-img">
+      </li>
+      <li>
+        Launch Thunderbird and select “Set up an Existing Email Account.”
+        
+      </li>
+      <li>
+        Enter your name, email (demo@your-name.com), and password.
+        <img src="image/S2Image/Mozilla/Screenshot 2025-05-17 173355.png" alt="Enter account details" class="step-img">
+      </li>
+      <li>
+        Choose “Manual config” if automatic setup doesn’t work.
+        
+      </li>
+      <li>
+        Enter IMAP and SMTP server details.
+        <img src="image/S2Image/Mozilla/Screenshot 2025-05-17 173511.png" alt="Server settings" class="step-img">
+      </li>
+      <li>
+        Click “Finish” to complete the setup.
+        <img src="image/S2Image/Mozilla/Screenshot 2025-05-17 173620.png" alt="Finished setup" class="step-img">
+      </li>
+    </ol>
+  </div>
+
+  <!-- Outlook Section -->
+  <div id="outlook" class="content">
+    <h2>Microsoft Outlook Setup</h2>
+    <ol>
+      <li>
+        Open Outlook or install it from the official website.
+        <img src="image/S2Image/OutLook/Screenshot 2025-04-29 182900.png" alt="Download or open Outlook" class="step-img">
+      </li>
+      <li>
+        Go to “File” → “Add Account”.
+        <br>
+        <img src="image/S2Image/OutLook/Screenshot 2025-04-29 183901.png" alt="Add account option" class="step-img">
+      </li>
+      <li>
+        Enter your email address (demo@your-name.com).
+        <img src="image/S2Image/OutLook/Screenshot 2025-04-29 184128.png" alt="Email input" class="step-img">
+      </li>
+      <li>
+        Enter your password when prompted.
+        <img src="image/S2Image/OutLook/Screenshot 2025-04-29 184253.png" alt="Password field" class="step-img">
+      </li>
+      <li>
+        Click “Done” to complete setup.
+        <img src="image/S2Image/OutLook/Screenshot 2025-04-29 184443.png" alt="Complete setup" class="step-img">
+      </li>
+    </ol>
+  </div>
+
+  <!-- Gmail Section -->
+  <div id="gmail" class="content">
+    <h2>Gmail "Send As" Setup</h2>
+    <ol>
+      <li>
+        Log in to your Gmail account.
+        <img src="image/S2Image/Gmail/Screenshot 2025-05-17 174211.png" alt="Gmail homepage" class="step-img">
+      </li>
+      <li>
+        Click the ⚙️ icon → “See all settings”.
+        <img src="image/S2Image/Gmail/Screenshot 2025-05-17 174234.png" alt="Settings in Gmail" class="step-img">
+      </li>
+      <li>
+        Go to the “Accounts and Import” tab.
+        <img src="image/S2Image/Gmail/Screenshot 2025-05-17 174314.png" alt="Accounts and Import tab" class="step-img">
+      </li>
+      <li>
+        Under “Send mail as,” click “Add another email address”.
+        <img src="image/S2Image/Gmail/Screenshot 2025-05-17 174356.png" alt="Add another email" class="step-img">
+      </li>
+      <li>
+        Enter your name and demo@your-name.com.
+        <img src="image/S2Image/Gmail/Screenshot 2025-05-17 175641.png" alt="Enter name and email" class="step-img">
+      </li>
+      <li>
+        Choose sending method:
+        <ul>
+          <li><strong>Send through Gmail</strong> (simpler)</li>
+          <li><strong>Send through SMTP</strong> (advanced)</li>
+        </ul>
+        
+      </li>
+      <li>
+        Click “Next Step” and verify the code sent to your email.
+        <img src="image/S2Image/Gmail/Screenshot 2025-05-17 175037.png" alt="Verification step" class="step-img">
+      </li>
+      <li>
+        You're now able to send mail as demo@your-name.com from Gmail.
+        <img src="image/S2Image/Gmail/Screenshot 2025-05-17 175123.png" alt="Send as completed" class="step-img">
+      </li>
+    </ol>
+  </div>
+
+  <footer>
+    &copy; 2025 Email Setup Guide – demo@your-name.com
+  </footer>
+
+  <script>
+    function showTab(tabId) {
+      const tabs = document.querySelectorAll(".content");
+      const buttons = document.querySelectorAll(".tab-btn");
+
+      tabs.forEach(tab => tab.classList.remove("active"));
+      buttons.forEach(btn => btn.classList.remove("active"));
+
+      document.getElementById(tabId).classList.add("active");
+      event.target.classList.add("active");
+    }
+  </script>
+</body>
+</html>
